@@ -25,8 +25,7 @@
         android:padding="10dp"
         android:text="Teacher Login"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView"
@@ -38,8 +37,7 @@
         android:padding="10dp"
         android:text="Don't have an account ? SignUp "
         android:textColor="@android:color/holo_red_light"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -48,8 +46,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="97dp"
+        android:fontFamily="cursive"
         android:text="Biometric Attendance Automation"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp" />
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 </RelativeLayout>
