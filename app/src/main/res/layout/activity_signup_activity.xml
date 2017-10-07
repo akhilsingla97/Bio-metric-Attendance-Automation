@@ -16,26 +16,39 @@
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editText5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView4"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Name"
+        android:inputType="text"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="Phone"
         android:inputType="phone"
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/background_light"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_below="@+id/editText5"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText4"
         android:layout_marginRight="0dp"
         android:ems="10"
         android:fontFamily="sans-serif"
@@ -44,14 +57,15 @@
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/background_light"
         android:textSize="18sp"
-        tools:layout_editor_absoluteY="317dp" />
+        tools:layout_editor_absoluteY="317dp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="Password"
@@ -60,14 +74,15 @@
         android:textColorHint="@android:color/background_light"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="368dp" />
+        tools:layout_editor_absoluteY="368dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="Confirm Password"
@@ -76,15 +91,16 @@
         android:textColorHint="@android:color/background_light"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="368dp" />
+        tools:layout_editor_absoluteY="368dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@android:color/transparent"
         android:elevation="0dp"
         android:onClick="signup"
@@ -93,7 +109,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textView4"
@@ -107,4 +125,5 @@
         android:textColor="?android:attr/colorPressedHighlight"
         android:textSize="36sp"
         android:textStyle="bold" />
+
 </RelativeLayout>

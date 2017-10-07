@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class signup_activity extends AppCompatActivity {
     Button b1;
-    private EditText eid, password, confpassword, phone;
+    private EditText eid, password, confpassword, phone, name;
     private DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class signup_activity extends AppCompatActivity {
         password = (EditText)findViewById(R.id.editText2);
         confpassword = (EditText)findViewById(R.id.editText3);
         phone = (EditText)findViewById(R.id.editText4);
+        name = (EditText) findViewById(R.id.editText5);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         b1= (Button) findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +66,19 @@ public class signup_activity extends AppCompatActivity {
         return (s.length() == 10);
     }
 
+    public class teacher{
+        public String Name, Phone, Email, Password;
+        public teacher(){
+
+        }
+        public teacher(String Name, String Phone, String Email, String Password){
+            this.Name = Name;
+            this.Phone = Phone;
+            this.Email = Email;
+            this.Password = Password;
+        }
+    }
+
     public void insertData(){
         try{
             if(!phoneCheck()){
@@ -76,14 +90,13 @@ public class signup_activity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Password must be atleast 6 characters long", Toast.LENGTH_LONG).show();
                 return;
             }
-            if(!testingVariable.equals(confpassword.getText().toString())){
+            if(!testingVariable.equals(confpassword.getText().toString())) {
                 Toast.makeText(getApplicationContext(), "Enter same password in confirm password", Toast.LENGTH_LONG).show();
                 return;
             }
-
-
-            mDatabase.child("users").child(phone.getText().toString()).child("eid").setValue(eid.getText().toString());
-            mDatabase.child("users").child(phone.getText().toString()).child("passw").setValue(password.getText().toString());
+            teacher t = new teacher(name.getText().toString(), phone.getText().toString(),
+                    eid.getText().toString(), password.getText().toString());
+            mDatabase.child("users").child(phone.getText().toString()).setValue(t);
             Toast.makeText(getApplicationContext(), "Account created Successfully !", Toast.LENGTH_SHORT).show();
             finish();
         }catch(Exception e){

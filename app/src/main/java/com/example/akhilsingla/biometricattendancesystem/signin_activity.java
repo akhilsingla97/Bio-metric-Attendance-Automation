@@ -55,16 +55,12 @@ public class signin_activity extends AppCompatActivity {
     void validate_login()
     {
         try{
-            mDatabase.child("users").child(number.getText().toString()).child("passw").addValueEventListener(new ValueEventListener() {
+            mDatabase.child("users").child(number.getText().toString()).child("Password").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     String pass = dataSnapshot.getValue(String.class);
                     if (pass!=null&&pass.equals(password.getText().toString())) {
                         Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_SHORT).show();
-//                        Intent i= new Intent(getApplicationContext(),home_activity.class);
-//                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                        startActivity(i);
-
                     }
 
                     else
