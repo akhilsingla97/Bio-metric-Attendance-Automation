@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "720725488467",
+    "firebase_url": "https://biometricattendance-d2ede.firebaseio.com",
+    "project_id": "biometricattendance-d2ede",
+    "storage_bucket": "biometricattendance-d2ede.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720725488467:android:a1a565729501be70",
+        "android_client_info": {
+          "package_name": "com.example.akhilsingla.biometricattendancesystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720725488467-hfgrup4na33tpge89mtu46a29dg9d4sp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.akhilsingla.biometricattendancesystem",
+            "certificate_hash": "da49618c4468164d12108434d456ca53e657b013"
+          }
+        },
+        {
+          "client_id": "720725488467-gn95s5jgfstn7f2o767hf8736cdhqltm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO9dUzQKI2y50bfUmNCRJ-mlGU7eIXJY0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720725488467-gn95s5jgfstn7f2o767hf8736cdhqltm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
