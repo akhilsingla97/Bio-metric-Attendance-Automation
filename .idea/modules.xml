@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bio-metric-Attendance-Automation.iml" filepath="$PROJECT_DIR$/Bio-metric-Attendance-Automation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+
+      <module fileurl="file://$PROJECT_DIR$/biometricAttendanceSystem.iml" filepath="$PROJECT_DIR$/biometricAttendanceSystem.iml" />
+
     </modules>
   </component>
 </project>

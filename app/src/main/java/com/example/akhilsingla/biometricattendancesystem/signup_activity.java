@@ -79,6 +79,12 @@ public class signup_activity extends AppCompatActivity {
         }
     }
 
+    public void takeMeToSelectMySemester(){
+        Intent intent = new Intent(this, after_signup_activity.class);
+        intent.putExtra("msg",phone.getText().toString());
+        startActivity(intent);
+    }
+
     public void insertData(){
         try{
             if(!phoneCheck()){
@@ -98,7 +104,7 @@ public class signup_activity extends AppCompatActivity {
                     eid.getText().toString(), password.getText().toString());
             mDatabase.child("users").child(phone.getText().toString()).setValue(t);
             Toast.makeText(getApplicationContext(), "Account created Successfully !", Toast.LENGTH_SHORT).show();
-            finish();
+            takeMeToSelectMySemester();
         }catch(Exception e){
             Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
         }
