@@ -52,6 +52,11 @@ public class signin_activity extends AppCompatActivity {
                 break;}
         return true;
     }
+    public void startNewActivity(){
+        Intent intent = new Intent(this, after_signin_activity.class);
+        intent.putExtra("msg", number.getText().toString());
+        startActivity(intent);
+    }
     void validate_login()
     {
         try{
@@ -61,6 +66,7 @@ public class signin_activity extends AppCompatActivity {
                     String pass = dataSnapshot.getValue(String.class);
                     if (pass!=null&&pass.equals(password.getText().toString())) {
                         Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_SHORT).show();
+                        startNewActivity();
                     }
 
                     else
