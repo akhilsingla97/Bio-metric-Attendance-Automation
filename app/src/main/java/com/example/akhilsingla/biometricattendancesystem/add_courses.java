@@ -105,9 +105,9 @@ public class add_courses extends AppCompatActivity {
                 "Yes",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        cname.setText("");
                         cid.setText("");
                         fid.setText("");
+                        cname.setText("");
                     }
                 });
 
