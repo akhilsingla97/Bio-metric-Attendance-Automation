@@ -83,6 +83,7 @@ public class signup_activity extends AppCompatActivity {
         Intent intent = new Intent(this, after_signup_activity.class);
         intent.putExtra("msg",phone.getText().toString());
         startActivity(intent);
+        finish();
     }
 
     public void insertData(){

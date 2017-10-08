@@ -56,6 +56,7 @@ public class signin_activity extends AppCompatActivity {
         Intent intent = new Intent(this, after_signin_activity.class);
         intent.putExtra("msg", number.getText().toString());
         startActivity(intent);
+        finish();
     }
     void validate_login()
     {

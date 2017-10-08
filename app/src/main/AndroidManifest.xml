@@ -19,7 +19,8 @@
         <activity android:name=".signin_activity" />
         <activity android:name=".signup_activity" />
         <activity android:name=".after_signin_activity" />
-        <activity android:name=".after_signup_activity"></activity>
+        <activity android:name=".after_signup_activity" />
+        <activity android:name=".add_courses"></activity>
     </application>
 
 </manifest>
