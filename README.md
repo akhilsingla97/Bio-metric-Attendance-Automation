@@ -27,7 +27,7 @@ We plan to build fingerprint based attendance system for our college:
   d) View attendance<br> 
   e) Change password<br>
 
-<h3>Explanation:<h3>
+<h3>Explanation:</h3>
 
 3a-> This gives option to select courses undertaken by the professor in the semester.
 
