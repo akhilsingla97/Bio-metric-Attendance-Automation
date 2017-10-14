@@ -47,7 +47,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="97dp"
         android:fontFamily="cursive"
-        android:text="Biometric Attendance Automation"
+        android:text="Fingerprint Attendance Automation"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_light"
         android:textSize="36sp"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Biometric Attendance System</string>
+    <string name="app_name">Fingerprint Attendance System</string>
     <string name="title_activity_after_signup_activity">after_signup_activity</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
