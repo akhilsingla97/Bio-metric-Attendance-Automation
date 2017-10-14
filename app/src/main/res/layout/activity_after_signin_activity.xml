@@ -49,6 +49,7 @@
         android:layout_marginBottom="80dp"
         android:fontFamily="sans-serif"
         android:text="Settings"
+        android:onClick="myRights"
         android:textAlignment="center"
         android:textColor="?android:attr/textColorPrimaryInverseNoDisable"
         android:textSize="30sp"

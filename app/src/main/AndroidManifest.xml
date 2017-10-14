@@ -22,7 +22,8 @@
         <activity android:name=".after_signup_activity" />
         <activity android:name=".add_courses" />
         <activity android:name=".SelectsemforAttendance" />
-        <activity android:name=".SelectCourseActivity"></activity>
+        <activity android:name=".SelectCourseActivity" />
+        <activity android:name=".rights"></activity>
     </application>
 
 </manifest>

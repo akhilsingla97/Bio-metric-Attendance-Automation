@@ -31,4 +31,11 @@ public class after_signin_activity extends AppCompatActivity {
         i.putExtra("msg",phoneNumber);
         startActivity(i);
     }
+
+    public void myRights(View v){
+        Intent i = new Intent(this, rights.class);
+        i.putExtra("msg",phoneNumber);
+        startActivity(i);
+    }
+
 }
