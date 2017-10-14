@@ -99,7 +99,7 @@ public class SelectCourseActivity extends AppCompatActivity implements AdapterVi
             courses.add(cid);
         }
         lv = (ListView) findViewById(R.id.selectCourse);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.semester_selection ,courses);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1 ,courses);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(this);
     }
