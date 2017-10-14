@@ -35,6 +35,7 @@
         android:layout_marginBottom="29dp"
         android:fontFamily="sans-serif"
         android:text="Start Attendance"
+        android:onClick="startAttendance"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="30sp"

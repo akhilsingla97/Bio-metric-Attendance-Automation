@@ -1,6 +1,7 @@
 package com.example.akhilsingla.biometricattendancesystem;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
     public void signin(View v){
         Intent intent = new Intent(this, signin_activity.class);
         startActivity(intent);
-        finish();
+        System.gc();
     }
     public void signup(View v){
         Intent intent = new Intent(this, signup_activity.class);
         startActivity(intent);
-        finish();
+        System.gc();
     }
 }
