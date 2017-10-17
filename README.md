@@ -44,7 +44,7 @@ We plan to build fingerprint based attendance system for our college:
 3e-> It is a basic funtionality that allows faculty to change the password.
 
 <h2>Database design:</h2>
-<b> DataBase Used : </b> Firebase (Google Realtime Database)
-<b>Course:</b> - Course ID, Course Name, Student Data, ProfID
-<b>Student:</b>StudentID, FingerprintID, Student Name, attendance count + Days when student attended the lecture.
-<b>Professors:</b> ProfID, password, Phone Number, Correspoinding Semesters and Courses<br>
+<b> DataBase Used : </b> Firebase (Google Realtime Database)<br>
+<b>Course :</b> Course ID, Course Name, Student Data, ProfID.<br>
+<b>Student :</b>StudentID, FingerprintID, Student Name, attendance count + Days when student attended the lecture.<br>
+<b>Professors :</b> ProfID, password, Phone Number, Correspoinding Semesters and Courses<br><br>
