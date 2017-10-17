@@ -23,7 +23,8 @@
         <activity android:name=".add_courses" />
         <activity android:name=".SelectsemforAttendance" />
         <activity android:name=".SelectCourseActivity" />
-        <activity android:name=".rights"></activity>
+        <activity android:name=".rights" />
+        <activity android:name=".add_student"></activity>
     </application>
 
 </manifest>

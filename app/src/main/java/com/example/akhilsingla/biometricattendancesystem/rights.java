@@ -25,4 +25,9 @@ public class rights extends AppCompatActivity {
         i.putExtra("msg", phoneNumber);
         startActivity(i);
     }
+    public void addStudent(View v){
+        Intent i = new Intent(this, add_student.class);
+        i.putExtra("msg", phoneNumber);
+        startActivity(i);
+    }
 }
