@@ -1,9 +1,13 @@
 package com.example.akhilsingla.biometricattendancesystem;
 
 import android.app.Dialog;
+import android.app.IntentService;
+import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
@@ -25,6 +29,7 @@ import java.util.List;
 
 public class add_student extends AppCompatActivity {
     TextView sem, course;
+    EditText name, sid;
     String phoneno;
     ArrayList<String> courses = new ArrayList<String>();
     public int counter;
@@ -33,8 +38,12 @@ public class add_student extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_student);
+        ActionBar supportActionBar = getSupportActionBar();
+        supportActionBar.setDisplayHomeAsUpEnabled(true);
         sem = (TextView) findViewById(R.id.edit3);
         course = (TextView) findViewById(R.id.edit4);
+        name = (EditText) findViewById(R.id.edit1);
+        sid = (EditText) findViewById(R.id.edit2);
         Bundle bundle = getIntent().getExtras();
         phoneno = bundle.getString("msg");
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -44,6 +53,26 @@ public class add_student extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         System.gc();
+        finish();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    public void scanIt(View v){
+        Intent i = new Intent(this, scanfinger.class);
+        i.putExtra("sem", format(sem.getText().toString()));
+        i.putExtra("course", format(course.getText().toString()));
+        i.putExtra("name", name.getText().toString());
+        i.putExtra("sid", sid.getText().toString());
+        if(name.getText().toString() == "" || sid.getText().toString() == "" ||
+                sem.getText().toString() == "" || course.getText().toString() == "") return;
+        startActivity(i);
         finish();
     }
     private void fetchData(DataSnapshot dataSnapshot)
@@ -118,7 +147,7 @@ public class add_student extends AppCompatActivity {
         dialog.setContentView(R.layout.radioselection);
         ArrayList<String> stringList=new ArrayList<>();  // here is list
         for(String c : courses) {
-            stringList.add(c + "  ");
+            stringList.add(c + "   ");
         }
         RadioGroup rg = dialog.findViewById(R.id.radio_group);
 

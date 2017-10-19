@@ -24,7 +24,8 @@
         <activity android:name=".SelectsemforAttendance" />
         <activity android:name=".SelectCourseActivity" />
         <activity android:name=".rights" />
-        <activity android:name=".add_student"></activity>
+        <activity android:name=".add_student" />
+        <activity android:name=".scanfinger"></activity>
     </application>
 
 </manifest>

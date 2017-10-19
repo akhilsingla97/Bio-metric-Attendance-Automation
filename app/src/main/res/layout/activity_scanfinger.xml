@@ -33,43 +33,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Student Name"
+        android:hint="FingerPrintID"
         android:layout_below="@+id/textView4"
         android:layout_alignParentStart="true"
         android:layout_marginTop="76dp" />
-
-    <EditText
-        android:id="@+id/edit2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="SID"
-        android:layout_below="@+id/edit1"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/edit3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/edit2"
-        android:layout_marginTop="30dp"
-        android:hint="Select Semester"
-        android:onClick="showRadioButtonDialog"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/edit4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/edit3"
-        android:layout_marginTop="30dp"
-        android:hint="Select Course"
-        android:onClick="showRadioButtonDialogCourse"
-        android:textSize="18sp" />
 
     <Button
         android:id="@+id/button1"
@@ -78,14 +45,14 @@
         android:layout_marginTop="37dp"
         android:background="@android:color/transparent"
         android:fontFamily="cursive"
-        android:text="Add Fingerprint"
+        android:text="Add Student"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="?attr/actionModeSplitBackground"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:onClick="scanIt"
-        android:layout_below="@+id/edit4"
+        android:onClick="insertStudent"
+        android:layout_below="@+id/edit1"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
