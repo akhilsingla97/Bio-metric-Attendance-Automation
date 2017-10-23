@@ -2,8 +2,10 @@ package com.example.akhilsingla.biometricattendancesystem;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,6 +26,8 @@ public class SelectsemforAttendance extends AppCompatActivity implements Adapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selectsemfor_attendance);
         Bundle bundle = getIntent().getExtras();
+        ActionBar supportActionBar = getSupportActionBar();
+        supportActionBar.setDisplayHomeAsUpEnabled(true);
         phoneNumber = bundle.getString("msg");
         for(int i = 0 ; i < 8 ; i ++){
             semesters[i] = "Semester " + (i + 1);
@@ -38,6 +42,15 @@ public class SelectsemforAttendance extends AppCompatActivity implements Adapter
     public void onBackPressed(){
         System.gc();
         finish();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

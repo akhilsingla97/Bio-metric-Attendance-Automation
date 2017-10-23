@@ -1,6 +1,8 @@
 package com.example.akhilsingla.biometricattendancesystem;
 
+import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -33,6 +35,8 @@ public class SelectCourseActivity extends AppCompatActivity implements AdapterVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_course);
+        ActionBar supportActionBar = getSupportActionBar();
+        supportActionBar.setDisplayHomeAsUpEnabled(true);
         Bundle bundle = getIntent().getExtras();
         try {
             parentResult = bundle.getString("msg");
@@ -52,6 +56,29 @@ public class SelectCourseActivity extends AppCompatActivity implements AdapterVi
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         TextView temp = (TextView) view;
         Toast.makeText(this, temp.getText().toString() + " is selected !", Toast.LENGTH_SHORT).show();
+        try{
+            Intent intent = new Intent(this, startAttendance.class);
+            intent.putExtra("course",temp.getText().toString());
+            startActivity(intent);
+            finish();
+        }catch(Exception e){
+            Toast.makeText(this, "Some Error Occurs -> " + e.toString(), Toast.LENGTH_SHORT).show();
+        }
+    }
+    @Override
+    public void onBackPressed(){
+        System.gc();
+        finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public String fetchPhone(String s){
