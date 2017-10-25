@@ -22,7 +22,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="63dp"
         android:fontFamily="cursive"
-        android:text="Biometric Attendance System"
+        android:text="Fingerprint Attendance System"
         android:textAlignment="center"
         android:textColor="?android:attr/colorPressedHighlight"
         android:textSize="36sp"
@@ -30,31 +30,37 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
-        android:fontFamily="sans-serif"
-        android:text="Start Attendance"
-        android:onClick="startAttendance"
-        android:textAlignment="center"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="30sp"
         android:layout_above="@+id/textView2"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/my_button"
+        android:fontFamily="sans-serif"
+        android:onClick="startAttendance"
+        android:text="Start Attendance"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:fontFamily="sans-serif"
-        android:text="Settings"
-        android:onClick="myRights"
-        android:textAlignment="center"
-        android:textColor="?android:attr/textColorPrimaryInverseNoDisable"
-        android:textSize="30sp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/my_button"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:fontFamily="sans-serif"
+        android:onClick="myRights"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
 
 
 </RelativeLayout>

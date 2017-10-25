@@ -20,12 +20,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:fontFamily="cursive"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
         android:text="Add Student"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_green_light"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp" />
 
     <EditText
         android:id="@+id/edit1"
@@ -51,41 +52,53 @@
 
     <TextView
         android:id="@+id/edit3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/edit2"
-        android:layout_marginTop="30dp"
-        android:hint="Select Semester"
+        android:layout_marginTop="35dp"
         android:onClick="showRadioButtonDialog"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:text="Select Semester"
+        android:textColor="@android:color/black"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/edit4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/edit3"
-        android:layout_marginTop="30dp"
-        android:hint="Select Course"
+        android:layout_alignBaseline="@+id/edit3"
+        android:layout_alignBottom="@+id/edit3"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/edit3"
         android:onClick="showRadioButtonDialogCourse"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:text="Select Course"
+        android:textColor="@android:color/black"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/edit4"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="cursive"
-        android:text="Add Fingerprint"
+        android:background="@drawable/my_button"
+        android:bottomLeftRadius="10px"
+        android:bottomRightRadius="10px"
+        android:fontFamily="sans-serif"
+        android:onClick="scanIt"
+        android:text="Register"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="?attr/actionModeSplitBackground"
+        android:textColor="?attr/colorPrimaryDark"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:onClick="scanIt"
-        android:layout_below="@+id/edit4"
-        android:layout_centerHorizontal="true" />
+        android:topLeftRadius="10px"
+        android:topRightRadius="10px" />
 
 </RelativeLayout>

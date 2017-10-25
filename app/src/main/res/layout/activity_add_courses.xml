@@ -20,12 +20,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:fontFamily="cursive"
+        android:fontFamily="sans-serif"
         android:text="Add Course"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@android:color/holo_green_light"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textSize="36sp" />
 
     <EditText
         android:id="@+id/edit1"
@@ -67,14 +67,15 @@
         android:layout_below="@+id/edit3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="cursive"
+        android:background="@drawable/my_button"
+        android:fontFamily="sans-serif"
         android:onClick="addCourseToDb"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
         android:text="Add This Course"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="?attr/actionModeSplitBackground"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
 </RelativeLayout>

@@ -65,13 +65,16 @@ public class add_student extends AppCompatActivity {
         }
     }
     public void scanIt(View v){
+        if(name.getText().toString().matches("") || sid.getText().toString().matches("") ||
+                sem.getText().toString().matches("") || course.getText().toString().matches("")) {
+            Toast.makeText(this, "Some Information is not filled !", Toast.LENGTH_SHORT).show();
+            return;
+        }
         Intent i = new Intent(this, scanfinger.class);
         i.putExtra("sem", format(sem.getText().toString()));
         i.putExtra("course", format(course.getText().toString()));
         i.putExtra("name", name.getText().toString());
         i.putExtra("sid", sid.getText().toString());
-        if(name.getText().toString() == "" || sid.getText().toString() == "" ||
-                sem.getText().toString() == "" || course.getText().toString() == "") return;
         startActivity(i);
         finish();
     }

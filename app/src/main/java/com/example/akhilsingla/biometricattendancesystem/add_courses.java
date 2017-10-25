@@ -107,6 +107,19 @@ public class add_courses extends AppCompatActivity {
     }
 
     public void addCourseToDb(View v){
+        if(cid.getText().toString().matches("")){
+            Toast.makeText(this, "Course Id can't be empty !", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        if(cname.getText().toString().matches("")){
+            Toast.makeText(this, "Course name can't be empty !", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(fid.getText().toString().matches("")){
+            Toast.makeText(this, "Faculty Id can't be empty !", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         courseData t = new courseData(cid.getText().toString(), cname.getText().toString(),
                 fid.getText().toString());
         mDatabase.child("users").child(PhoneNumber).child("Semester " + (Integer.parseInt(Semester) + 1)).child(cid.getText().toString()).setValue(t);
