@@ -18,12 +18,29 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:onClick="signin"
         android:padding="10dp"
         android:text="Professor Login"
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="24sp"
         android:layout_marginBottom="29dp"
+=======
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/my_button"
+        android:onClick="signin"
+        android:padding="10dp"
+        android:text="Professor Login"
+        android:textColor="?attr/actionModeSplitBackground"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+>>>>>>> 3e4896926c975545fb82b104f871601ae5dc605a
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
@@ -31,9 +48,17 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="126dp"
         android:fontFamily="plain"
         android:text="WELCOME"
+=======
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="97dp"
+        android:fontFamily="cursive"
+        android:text="Fingerprint Attendance Automation"
+>>>>>>> 3e4896926c975545fb82b104f871601ae5dc605a
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="38sp"

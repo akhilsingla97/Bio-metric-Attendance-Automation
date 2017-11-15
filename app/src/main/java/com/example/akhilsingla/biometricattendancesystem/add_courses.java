@@ -2,9 +2,11 @@ package com.example.akhilsingla.biometricattendancesystem;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,6 +22,8 @@ public class add_courses extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_courses);
+        ActionBar supportActionBar = getSupportActionBar();
+        supportActionBar.setDisplayHomeAsUpEnabled(true);
         Bundle bundle = getIntent().getExtras();
         try {
             parentResult = bundle.getString("msg");
@@ -33,6 +37,19 @@ public class add_courses extends AppCompatActivity {
         cname = (EditText) findViewById(R.id.edit1);
         cid = (EditText) findViewById(R.id.edit2);
         fid = (EditText) findViewById(R.id.edit3);
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;}
+        return true;
     }
     @Override
     public void onDestroy() {
@@ -90,9 +107,22 @@ public class add_courses extends AppCompatActivity {
     }
 
     public void addCourseToDb(View v){
+        if(cid.getText().toString().matches("")){
+            Toast.makeText(this, "Course Id can't be empty !", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        if(cname.getText().toString().matches("")){
+            Toast.makeText(this, "Course name can't be empty !", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(fid.getText().toString().matches("")){
+            Toast.makeText(this, "Faculty Id can't be empty !", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         courseData t = new courseData(cid.getText().toString(), cname.getText().toString(),
                 fid.getText().toString());
-        mDatabase.child("users").child(PhoneNumber).child("Semester " + Semester).child(cid.getText().toString()).setValue(t);
+        mDatabase.child("users").child(PhoneNumber).child("Semester " + (Integer.parseInt(Semester) + 1)).child(cid.getText().toString()).setValue(t);
         Toast.makeText(this, "Course Added Successfully !", Toast.LENGTH_SHORT).show();
 
 

@@ -100,18 +100,20 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@android:color/transparent"
+        android:background="@drawable/my_button"
         android:elevation="0dp"
         android:onClick="signup"
-        android:text="Sign Me Up"
+        android:text="Register"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/colorPrimary"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView4"
