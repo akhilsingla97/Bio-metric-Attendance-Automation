@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Finger-Print Attendance Automation"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -20,7 +20,10 @@
         <activity android:name=".signup_activity" />
         <activity android:name=".after_signin_activity" />
         <activity android:name=".after_signup_activity" />
-        <activity android:name=".add_courses"></activity>
+        <activity android:name=".add_courses" />
+        <activity android:name=".Settings" />
+        <activity android:name=".Admin_signin" />
+        <activity android:name=".after_admin_signin"></activity>
     </application>
 
 </manifest>
