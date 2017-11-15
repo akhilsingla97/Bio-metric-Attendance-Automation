@@ -10,22 +10,15 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
 
-        android:src="@drawable/images"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:src="@drawable/finger"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:onClick="signin"
-        android:padding="10dp"
-        android:text="Professor Login"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="24sp"
-        android:layout_marginBottom="29dp"
-=======
         android:layout_above="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
@@ -40,43 +33,25 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
->>>>>>> 3e4896926c975545fb82b104f871601ae5dc605a
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="signup"
+        android:padding="10dp"
+        android:text="Don't have an account ? SignUp "
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="126dp"
-        android:fontFamily="plain"
-        android:text="WELCOME"
-=======
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="97dp"
         android:fontFamily="cursive"
         android:text="Fingerprint Attendance Automation"
->>>>>>> 3e4896926c975545fb82b104f871601ae5dc605a
         android:textAlignment="center"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="38sp"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="adminlogin"
-        android:padding="10dp"
-        android:text="Admin Login"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="24sp"
-        android:layout_marginBottom="96dp"
-        android:layout_above="@+id/textView3"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 </RelativeLayout>

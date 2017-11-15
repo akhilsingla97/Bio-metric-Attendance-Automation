@@ -18,11 +18,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         System.gc();
     }
-    public void adminlogin(View v){
-        Intent intent = new Intent(this, Admin_signin.class);
-        startActivity(intent);
-        finish();
-    }
     public void signup(View v){
         Intent intent = new Intent(this, signup_activity.class);
         startActivity(intent);
