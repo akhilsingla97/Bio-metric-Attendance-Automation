@@ -1,6 +1,7 @@
 package com.example.akhilsingla.biometricattendancesystem;
 
 import android.content.Intent;
+import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -18,12 +19,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class startAttendance extends AppCompatActivity implements AdapterView.OnItemClickListener{
     String course;
     ListView lv;
     ArrayList<String> students = new ArrayList<String>();
     ArrayList<String> fingerPrintID = new ArrayList<>();
+    HashMap<String, Integer> doneAttendance = new HashMap<>();
     private DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +55,17 @@ public class startAttendance extends AppCompatActivity implements AdapterView.On
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         TextView temp = (TextView) view;
-        Toast.makeText(this, fingerPrintID.get(i) + " is selected !", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, fingerPrintID.get(i) + " is selected !", Toast.LENGTH_SHORT).show();
+        if(doneAttendance.containsKey(fingerPrintID.get(i))){
+            return;
+        }
+        doneAttendance.put(fingerPrintID.get(i), 1);
+        Intent intent = new Intent(this, FingerprintMatcher.class);
+        intent.putExtra("fingerprint" , fingerPrintID.get(i));
+        intent.putExtra("course", course);
+        intent.putExtra("sid", temp.getText().toString());
+        startActivity(intent);
+        view.setClickable(false);
     }
     private void fetchData(DataSnapshot dataSnapshot)
     {

@@ -26,7 +26,8 @@
         <activity android:name=".rights" />
         <activity android:name=".add_student" />
         <activity android:name=".scanfinger" />
-        <activity android:name=".startAttendance"></activity>
+        <activity android:name=".startAttendance" />
+        <activity android:name=".FingerprintMatcher"></activity>
     </application>
 
 </manifest>
